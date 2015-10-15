@@ -48,7 +48,26 @@
                 style="?android:attr/textAppearanceLarge" android:layout_width="match_parent"
                 android:layout_height="match_parent" android:padding="16dp" android:textIsSelectable="true"
                 tools:context=".SerieDetailFragment" />
+            <GridView
+                android:id="@+id/gridView1"
+                android:layout_width="fill_parent"
+                android:layout_height="200dp"
+                android:layout_margin="10dp"
+                android:background="#EFDFDF"
+                android:horizontalSpacing="5dp"
+                android:verticalSpacing="5dp"
+                android:numColumns="4"
+                android:columnWidth="90dp"
+                android:stretchMode="columnWidth"
+                android:gravity="center" >
+            </GridView>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Take Photo!"
+                android:id="@+id/button_photo"/>
         </LinearLayout>
+
     </android.support.v4.widget.NestedScrollView>
 
     <android.support.design.widget.FloatingActionButton android:id="@+id/fab"
