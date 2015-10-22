@@ -25,6 +25,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends ActivityGroup
 implements NavigationView.OnNavigationItemSelectedListener,  RadioGroup.OnCheckedChangeListener {
@@ -71,7 +72,11 @@ implements NavigationView.OnNavigationItemSelectedListener,  RadioGroup.OnChecke
         iniController();
         iniListener();
         iniVariable();
-
+        content.Choosable_Place.put(content.locations[0], false);
+        List<String> ls = new ArrayList<String>();
+        List<Integer> lsi = new ArrayList<Integer>();
+        content.Serie_atPlace.put(content.locations[0],ls);
+        content.Serie_atPlace_Id.put(content.locations[0],lsi);
         mRadioButton1.setChecked(true);
         mViewPager.setCurrentItem(1);
         mCurrentCheckedRadioLeft = getCurrentCheckedRadioLeft();
@@ -139,10 +144,22 @@ implements NavigationView.OnNavigationItemSelectedListener,  RadioGroup.OnChecke
         mViews = new ArrayList<View>();
         View view1 = getLocalActivityManager().startActivity("view1",
                 new Intent(this, list.class)).getDecorView();
+        View view2 =null;
+        View view3 =null;
+        try{
+            view2 = getLocalActivityManager().startActivity("view2",
+                    new Intent(this, getLocation.class)).getDecorView();
+
+            view3 = getLocalActivityManager().startActivity("view3",
+                    new Intent(this, Notification.class)).getDecorView();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
         mViews.add(getLayoutInflater().inflate(R.layout.layout_0, null));
         mViews.add(view1);
-        mViews.add(getLayoutInflater().inflate(R.layout.layout_2, null));
-        mViews.add(getLayoutInflater().inflate(R.layout.layout_3, null));
+        Log.i("iniV","view2");
+        mViews.add(view2);
+        mViews.add(view3);
         mViews.add(getLayoutInflater().inflate(R.layout.layout_4, null));
         mViews.add(getLayoutInflater().inflate(R.layout.layout_5, null));
         mViews.add(getLayoutInflater().inflate(R.layout.layout_0, null));

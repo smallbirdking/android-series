@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/smallbirdking/seriess/function/BaseActivity.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/editview_shape.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/gridview_addpic.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/naruto_hinata.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/griditem_addpic.xml" charset="GBK" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

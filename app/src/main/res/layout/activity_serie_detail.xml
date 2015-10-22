@@ -14,6 +14,12 @@
             android:layout_width="match_parent" android:layout_height="match_parent"
             android:fitsSystemWindows="true" app:contentScrim="?attr/colorPrimary"
             app:layout_scrollFlags="scroll|exitUntilCollapsed" app:toolbarId="@+id/toolbar">
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:minHeight="190dp"
+                android:id="@+id/title_image"
+                app:layout_collapseMode="parallax" />
 
             <android.support.v7.widget.Toolbar android:id="@+id/detail_toolbar"
                 android:layout_width="match_parent" android:layout_height="?attr/actionBarSize"
@@ -37,12 +43,47 @@
             android:paddingLeft="12dip"
             android:paddingTop="12dip"
             tools:context=".SerieDetailFragment">
-            <ImageView
-                android:layout_width="wrap_content"
-                android:id="@+id/serie_detail_Image"
-                android:layout_height="fill_parent"
-                xmlns:android="http://schemas.android.com/apk/res/android">
-            </ImageView>
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dip"
+                android:paddingLeft="12dip">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/serie_detail_Image"
+                    android:layout_height="fill_parent">
+                </ImageView>
+                <TextView
+                    android:text="TextView01"
+                    android:layout_height="wrap_content"
+                    android:layout_width="fill_parent"
+                    android:id="@+id/itemTitle_detail"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/serie_detail_Image"
+                    android:textSize="20dip">
+                </TextView>
+                <TextView
+                    android:text="TextView02"
+                    android:layout_height="wrap_content"
+                    android:layout_width="fill_parent"
+                    android:id="@+id/itemText_detail"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/serie_detail_Image"
+                    android:layout_below="@+id/itemTitle_detail">
+                </TextView>
+            </RelativeLayout>
+            <TextView
+                android:text="Overview"
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:id="@+id/itemText_overview"
+                style="?android:attr/textAppearanceLarge"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp">
+            </TextView>
             <TextView xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:tools="http://schemas.android.com/tools" android:id="@+id/serie_detail"
                 style="?android:attr/textAppearanceLarge" android:layout_width="match_parent"
@@ -52,7 +93,7 @@
                 android:id="@+id/gridView1"
                 android:layout_width="fill_parent"
                 android:layout_height="200dp"
-                android:layout_margin="10dp"
+                android:layout_marginRight="10dp"
                 android:background="#EFDFDF"
                 android:horizontalSpacing="5dp"
                 android:verticalSpacing="5dp"
@@ -66,6 +107,20 @@
                 android:layout_height="wrap_content"
                 android:text="Take Photo!"
                 android:id="@+id/button_photo"/>
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="place we want to notice"/>
+
+                <CheckBox android:text="checkbox" android:id="@+id/CheckBox01" android:layout_width="wrap_content" android:layout_height="wrap_content"></CheckBox>
+                <CheckBox android:text="checkbox" android:id="@+id/CheckBox02" android:layout_width="wrap_content" android:layout_height="wrap_content"></CheckBox>
+                <Button android:id="@+id/Button01" android:text="OK" android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+            </LinearLayout>
+
         </LinearLayout>
 
     </android.support.v4.widget.NestedScrollView>

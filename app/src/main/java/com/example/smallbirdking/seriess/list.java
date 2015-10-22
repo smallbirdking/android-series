@@ -25,6 +25,7 @@ import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 
@@ -62,6 +63,11 @@ public class list extends Activity {
                 responseObj = gson.fromJson(responsestr, response.class);
                 adaptor = new custumAdaptor(list.this, responseObj.getResults());
                 listView.setAdapter(adaptor);
+                for(int i = 0; i < responseObj.getResults().size(); i++) {
+                    String name = responseObj.getResults().get(i).getName();
+                    content.Choosed_inSeie.put(name, (HashMap) content.Choosable_Place.clone());
+                }
+                Log.i("content.Choosed_inSeie", String.valueOf(content.Choosed_inSeie));
             }
 
             @Override
@@ -88,6 +94,7 @@ public class list extends Activity {
             }
         });
         //listView.setAdapter(new ListViewAdapter(titles,texts,resIds));
+
     }
 
     public class ListViewAdapter extends BaseAdapter{

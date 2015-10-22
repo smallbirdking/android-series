@@ -34,17 +34,17 @@
                 >
                 <RadioButton
                     style="@style/radioButton"
-                    android:text="one"
+                    android:text="series"
                     android:id="@+id/btn1"
                     />
                 <RadioButton
                     style="@style/radioButton"
-                    android:text="two"
+                    android:text="location"
                     android:id="@+id/btn2"
                     />
                 <RadioButton
                     style="@style/radioButton"
-                    android:text="three"
+                    android:text="notification"
                     android:id="@+id/btn3"
                     />
                 <RadioButton
